@@ -27,7 +27,7 @@ namespace ConsoleApplication2
             int stops = numberofStops;  //5
 
             // load the csv file into LondonList by calling the FromRouteCSV to assign to each class object...
-            List<LondonTubeRoute> LondonList = File.ReadAllLines(@"C:\VSProjects\LondonTube\data\Londontubelines.csv")
+            List<LondonTubeRoute> LondonList = File.ReadAllLines(@"C:\LondonTube-master\data\Londontubelines.csv")
                                            .Skip(1)
                                            .Select(v => LondonTubeRoute.FromRouteCSV(v))
                                             .ToList();
